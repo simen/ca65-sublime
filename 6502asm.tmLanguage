@@ -7,6 +7,8 @@
 		<string>s</string>
 		<string>asm</string>
 		<string>a65</string>
+		<string>inc</string>
+		<string>def</string>
 	</array>
 	<key>name</key>
 	<string>CA65 6502 Assembler</string>
@@ -28,7 +30,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^\s*\.(?i:a16|a8|addr|align|asciiz|assert|autoimport|bss|byte|byt|case|charmap|code|condes|constructor|data|dbyt|debuginfo|defined|define|def|destructor|dword|elseif|else|endenum|endif|endmac|endmacro|endproc|endrep|endrepeat|endscope|endstruct|end|enum|error|exitmacro|exitmac|exportzp|export|faraddr|feature|fileopt|fopt|forceimport|globalzp|global|i16|i8|ifblank|ifconst|ifdef|ifnblank|ifndef|ifnref|ifp02|ifp816|ifpc02|ifpsc02|ifref|if|importzp|import|incbin|include|interruptor|linecont|listbytes|list|localchar|local|macpack|macro|mac|org|out|p02|p816|pagelength|pagelen|pc02|popseg|proc|psc02|pushseg|reloc|repeat|res|rodata|scope|segment|setcpu|smart|struct|sunplus|tag|warning|word|zeropage|bankbyte|blank|concat|const|hibyte|hiword|ident|left|lobyte|loword|match|mid|ref|referenced|right|sizeof|strat|sprintf|string|strlen|tcount|xmatch|)\b</string>
+			<string>(^|\s+)\.(?i:bss|code|data|zeropage)\b</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(^|\s+)\.(?i:a16|a8|addr|align|asciiz|assert|autoimport|byte|byt|case|charmap|condes|constructor|dbyt|debuginfo|defined|define|def|destructor|dword|elseif|else|endenum|endif|endmac|endmacro|endproc|endrep|endrepeat|endscope|endstruct|end|enum|error|exitmacro|exitmac|exportzp|export|faraddr|feature|fileopt|fopt|forceimport|globalzp|global|i16|i8|ifblank|ifconst|ifdef|ifnblank|ifndef|ifnref|ifp02|ifp816|ifpc02|ifpsc02|ifref|if|importzp|import|incbin|include|interruptor|linecont|listbytes|list|localchar|local|macpack|macro|mac|org|out|p02|p816|pagelength|pagelen|pc02|popseg|proc|psc02|pushseg|reloc|repeat|res|rodata|scope|segment|setcpu|smart|struct|sunplus|tag|warning|word|bankbyte|blank|concat|const|hibyte|hiword|ident|left|lobyte|loword|match|mid|ref|referenced|right|sizeof|strat|sprintf|string|strlen|tcount|xmatch|)\b</string>
 			<key>name</key>
 			<string>keyword.control.command</string>
 		</dict>
